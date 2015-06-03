@@ -1,0 +1,4 @@
+Day 3: 19/05/2015
+Tasks Done:
+
+Trying to configure Java 3d for Windows 7 which was held back by java native drivers and system hardware

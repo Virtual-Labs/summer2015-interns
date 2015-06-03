@@ -1,0 +1,8 @@
+Day 9: 27/05/2015
+Tasks Done:
+
+Understand the process of Shell Scripting
+
+Tasks Ahead:
+
+Automate the process of resolving client side dependencies
