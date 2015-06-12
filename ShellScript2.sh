@@ -46,7 +46,7 @@ fi
 
 if [ $model = "Ubuntu" ]
 then
-line="$line.db"
+line="$line.deb"
 else
 line="$line.rpm"
 fi
