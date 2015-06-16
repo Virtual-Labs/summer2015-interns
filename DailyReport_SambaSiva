@@ -22,4 +22,4 @@ DAY 21 : 10/06/2015 : Completed and checked script part which automatically gene
 DAY 22 : 11/06/2015 : Completed script part which sets path for java(jdk) only after successfull installation
 DAY 23 : 12/06/2015 : Tried to automate process of running shellscript on client m/c via html and php
 DAY 24 : 15/06/2015 : Above process requires php to be installed in client's computer and hence tried to run commands via javascript as presently all browsers are javascript enabled
-DAY 25 : 16/06/2015 : 
+DAY 25 : 16/06/2015 : Implemented Semi-Automated process i.e user has to run shell-script on his machine by following the instructions provided 
