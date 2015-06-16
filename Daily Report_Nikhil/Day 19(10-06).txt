@@ -1,0 +1,6 @@
+Day 19: 10/06/2015
+Tasks Done:
+Let the script ping a container when run.
+
+Tasks Ahead:
+Let the script indentify the type of device and OS it is running on.

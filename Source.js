@@ -1,35 +1,42 @@
 /**
- * Created by NIKHIL PUNNAM on 6/3/2015.
+ * Created by NIKHIL KARTHIK on 6/3/2015.
  */
 function LoadFile() {
 
 
     //Reading and displaying the Plugins Required
-    var oFrame = document.getElementById("frmFile");
-    var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
-    while (strRawContents.indexOf("\r") >= 0)
+    //var div = document.getElementById('txt');
+
+   /* var oFrame = document.getElementById("frmFile");
+    var strRawContents = window.frames[0].document.body.innerHTML;
+    while (strRawContents!=null && strRawContents.indexOf("\r") >= 0)
         strRawContents = strRawContents.replace("\r", "");
     var arrLines = strRawContents.split("\n");
-    document.writeln("File " + oFrame.src + " has " + arrLines.length + " line(s)<br/>");
+    document.writeln("File " + oFrame.src + " has " + arrLines.length + " line(s)<br/>");*/
 
+    var arrLines = ["Java", "Flash"];
     for (var i = 0; i < arrLines.length; i++) {
         var temp = false;
         var curLine = arrLines[i];
-        document.write("Line #" + (i + 1) + " is: '" + curLine + "'<br/>");
-        for( var j=0; j<navigator.plugins.length; j++){
+        for (var j = 0; j < navigator.plugins.length; j++) {
             var plugin = navigator.plugins[j];
             var plugin_name = plugin.name;
             var n = plugin_name.search(curLine);
-            if(n!=-1) {
-                document.write("Plugin Present<br/>");
-                temp=true;
+            if (n != -1) {
+                document.writeln("<br/> Plugin Present<br/>");
+                document.writeln(plugin_name);
+                temp = true;
                 break;
             }
 
         }
-        if(temp==false) document.write("Plugin is not present");
-    }
+        if (temp == false) {
+            document.write(" Plugin is not present<br/>");
+            document.write(plugin_name);
+			
 
+        }
+    }
 
     var unknown = 'Unknown';
 
