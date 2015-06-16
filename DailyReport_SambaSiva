@@ -1,0 +1,25 @@
+DAY 1 : 15/05/2015 : Got familiarized with github and installed ubuntu on vm-ware work station.
+DAY 2 : 18/05/2015 : Installed Adobe Flash Player,Java and Java 3D on windows 7 and tried to simulate experiments containing Java 3D in Virtual Labs
+DAY 3 : 19/05/2015 : Tried to install Java-3d in ubuntu , got error - ClassNotFoundException in java3d.org/howto.html
+DAY 4 : 20/05/2015 : Reinstalled Java and Java-3d in new ubuntu PC , got java working but java-3d blank screen with out any pop-ups in java3d.org/howto.html
+DAY 5 : 21/05/2015 : Tried to install java-3d in CentOs6 machine,got java working but java-3d blank screen same as in ubuntu
+DAY 6 : 22/05/2015 : As per responses in forums tried to install java-3d 1.6 -- No use ,same result 
+DAY 7 : 23/05/2015 : Tried to install java-3d in CentOs : tried different methods in net
+DAY 8 : 24/05/2015 : Tried to install java-3d in CentOs : It is given in forum that problem is with lab not with initalization
+DAY 9 : 25/05/2015 : Checked Labs : some labs which require java-3d are working in ubuntu but not in centOs
+DAY 10 : 26/05/2015 : Checked Labs : checked all required labs in ubuntu and prepared report and uploaded in Git
+DAY 11 : 27/05/2015 : Checked Labs : given last attempt on searching faults in installing java-3d in centOs and submitted report
+DAY 12 : 28/05/2015 : Automate the process of resolving Client-side dependencies : Studied Shell-script and Javascript language.
+DAY 13 : 29/05/2015 : Automate the process of resolving Client-side dependencies : Completed Javascript learning
+DAY 14 : 01/06/2015 : Automate the process of resolving Client-side dependencies : Studied previous javaScript codes which lists plugins installed and PC configuration
+DAY 15 : 02/06/2015 : Automate the process of resolving Client-side dependencies : Started writing code that takes txt file as input and gives the list of required plugins to be installed. 
+DAY 16 : 03/06/2015 : Learnt Shell Script and Started writing code to read text-file and try to install software in it.
+DAY 17 : 04/06/2015 : Learnt Shell Script and Started writing code to read text-file and try to install software in it.Studied and Installed Apache server.
+DAY 18 : 05/06/2015 : Completed and checked script part which reads text-file and which writes into another
+DAY 19 : 08/06/2015 : Completed and checked script part which let you know the system properties ubuntu/centos 32-bit/64-bit
+DAY 20 : 09/06/2015 : Completed and checked script part which downloads softwares (whose names are taken from .txt file) using wget command from csdependencies container
+DAY 21 : 10/06/2015 : Completed and checked script part which automatically generates required name of package to download from server.
+DAY 22 : 11/06/2015 : Completed script part which sets path for java(jdk) only after successfull installation
+DAY 23 : 12/06/2015 : Tried to automate process of running shellscript on client m/c via html and php
+DAY 24 : 15/06/2015 : Above process requires php to be installed in client's computer and hence tried to run commands via javascript as presently all browsers are javascript enabled
+DAY 25 : 16/06/2015 : 
