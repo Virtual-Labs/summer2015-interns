@@ -1,11 +1,10 @@
 #!/bin/bash
-
-
 #initializing variables
 bit=32
 bitv="x86_64"
 source=".rpm"
 model="Ubuntu"
+extra="jdk"
 
 #checking for system version
 uname -m > vers.txt
@@ -46,8 +45,10 @@ fi
 
 if [ $model = "Ubuntu" ]
 then
+lback=$line
 line="$line.deb"
 else
+lback=$line
 line="$line.rpm"
 fi
 
@@ -60,6 +61,7 @@ sudo apt-get install wget
 export http_proxy=""
 wget 10.4.15.172/$line
 dpkg -i $line
+success=`echo $?`
 
 else
 #checking for wget installation and proxy settings
@@ -67,8 +69,23 @@ sudo yum install wget
 export http_proxy=""
 wget 10.4.15.172/$line
 rpm -ivh $line
+success=`echo $?`
 fi 
+#DISPLAYING SUCCESS MSG
+echo "\nSuccess = $success"
+
+if test $success -eq 0 
+then
+#now to set path...
+if echo "$line" | grep -q "$extra";then
+echo "JAVA_HOME=/usr/lib/jvm/$lback" >> "/etc/profile"
+echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/bin" >> "/etc/profile"
+echo "export JAVA_HOME" >> "/etc/profile" 
+echo "export JRE_HOME" >> "/etc/profile"
+echo "export PATH" >> "/etc/profile" 
+fi
+fi
 
 done < modtxt.txt
+#having old proxy
 export http_proxy="http://proxy.iiit.ac.in.8080"
-
