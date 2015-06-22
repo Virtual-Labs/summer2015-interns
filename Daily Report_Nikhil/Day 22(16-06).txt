@@ -1,7 +1,7 @@
 Day 22: 16/06/2015
 
 Tasks Done:
-Upload the packages of Ubuntu debian packages on the container and learnt to make a container on base 4.
+Implemented Semi-Automated process i.e user has to run shell-script on his machine by following the instructions provided.
 
 Tasks Ahead:
 Make javascript and shell script deal with the container holding the packages.
