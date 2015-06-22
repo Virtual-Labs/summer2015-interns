@@ -23,3 +23,6 @@ DAY 22 : 11/06/2015 : Completed script part which sets path for java(jdk) only a
 DAY 23 : 12/06/2015 : Tried to automate process of running shellscript on client m/c via html and php
 DAY 24 : 15/06/2015 : Above process requires php to be installed in client's computer and hence tried to run commands via javascript as presently all browsers are javascript enabled
 DAY 25 : 16/06/2015 : Implemented Semi-Automated process i.e user has to run shell-script on his machine by following the instructions provided 
+DAY 26 : 17/06/2015 : Listed client side dependencies for 36 labs and determined basic configuration which is sufficient to run most labs
+DAY 27 : 18/06/2015 : Discussed a workflow to integrate the code segments with us and prepared a flow chart for doing so
+DAY 28 : 19/06/2015 : Discussed the process of implementation along with Nikhil ( Asked sir for his inputs, so not yet started implementing it )
