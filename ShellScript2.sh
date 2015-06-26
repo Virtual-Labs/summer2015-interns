@@ -72,7 +72,7 @@ rpm -ivh $line
 success=`echo $?`
 fi 
 #DISPLAYING SUCCESS MSG
-echo "\nSuccess = $success"
+#echo "\nSuccess = $success"
 
 if test $success -eq 0 
 then
@@ -84,8 +84,15 @@ echo "export JAVA_HOME" >> "/etc/profile"
 echo "export JRE_HOME" >> "/etc/profile"
 echo "export PATH" >> "/etc/profile" 
 fi
+else 
+sudo apt-get -f install
 fi
 
 done < modtxt.txt
 #having old proxy
 export http_proxy="http://proxy.iiit.ac.in.8080"
+
+pwd > vers.txt
+read -r li < vers.txt
+rm $li/vers.txt
+#rm -R $line
