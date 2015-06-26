@@ -26,4 +26,8 @@ DAY 25 : 16/06/2015 : Implemented Semi-Automated process i.e user has to run she
 DAY 26 : 17/06/2015 : Listed client side dependencies for 36 labs and determined basic configuration which is sufficient to run most labs
 DAY 27 : 18/06/2015 : Discussed a workflow to integrate the code segments with us and prepared a flow chart for doing so
 DAY 28 : 19/06/2015 : Discussed the process of implementation along with Nikhil ( Asked Prof.Raghu for his inputs, so not yet started implementing it )
-DAY 29 : 22/06/2015 : Discussed the new process of implementation with Prof.Raghu 
+DAY 29 : 22/06/2015 : Discussed the new process of implementation with Prof.Raghu and he accepted that procedure
+DAY 30 : 23/06/2015 : Prepared the disjoint sets of Labs with four categories and checking their validity of mentioned dependencies
+DAY 31 : 24/06/2015 : Concluded that labs run on mentioned depencies and Started to check if other versions also facilitate the working of labs
+DAY 32 : 25/06/2015 : Uploaded the sheet containing categories ti Git and checked the validity of Category Java-7 and found it also runs with Java-6
+DAY 33 : 26/06/2015 : Concluded the Basic Configuration and Checking the Working of Basic Configuration in Ubuntu.
