@@ -223,7 +223,7 @@ $(document).ready(function(){
 
 	$('#file').click(function(e){
 	
-	var arrn="This File lists the steps to be done to install all the required plugins needed to run the experiment. \n After Downloading the requirements.txt and shellscript.sh \n 1) Press ctrl + alt + t(Terminal) and traverse to the Downloads folder. \n 2) Then with super user privileges type in sh shellscript.sh \n 3) The Packages will be downloaded and installed in your system. \n 4) Then go to the experiment site and allow if any permissions are asked. \n 5) You are ready to run the simulation! \n All The Best and Enjoy! "
+	var arrn="This File lists the steps to be done to install all the required plugins needed to run the experiment. \n 1) Click on Requirements to download the list of plugins needed. \n 2) Then click on Shell Script to download the script. \n 3) Press ctrl + alt + t(Terminal) and traverse to the Downloads folder. \n 4) Then with super user privileges type in sh shellscript.sh \n 5) The Packages will be downloaded and installed in your system. \n 6) Then go to the experiment site and allow if any permissions are asked. \n 7) You are ready to run the simulation! \n All The Best and Enjoy! ";
 
 	$.generateFile({
 			filename	: 'readme.txt',

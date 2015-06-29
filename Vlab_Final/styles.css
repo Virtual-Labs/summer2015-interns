@@ -422,7 +422,7 @@ color:#000000 !important;
 .instruction_div
 {
 	width: 400px;
-	top: 150px;
+	top: 50px;
 	background-color: #FFFFFF;
 	border: 5px solid #A9C6D8;
 }
@@ -437,7 +437,7 @@ color:#000000 !important;
 
 form{
 	width:500px;
-	margin:190px auto 0;
+	margin:100px auto 0;
 	text-align:center;
 }
 
@@ -452,12 +452,12 @@ textarea{
 	overflow:auto;
 }
 
-.blueButton{
+/*.blueButton{
 	background:url('buttons.png') no-repeat;
 	text-shadow:1px 1px 1px #277c9b;
 	color:#fff !important;
-	width:99px;
-	height:38px;
+	width:175px;
+	height:37px;
 	border:none;
 	text-decoration:none;
 	display:inline-block;
@@ -466,7 +466,7 @@ textarea{
 	text-align: center;
 	margin: 0 4px;
 }
-
+*/
 
 .blueButton:hover{
 	background-position:left bottom;
@@ -510,7 +510,7 @@ h2{
 
 header{
 	display:block;
-	margin-top:40px;
+	margin-top:20px;
 	position:relative;
 }
 
