@@ -3,7 +3,7 @@ $(document).ready(function(){
 	
 	$('#download').click(function(e){
 
-		var arr="\n";
+		var arr="";
 		var unknown = 'Unknown';
 
     // screen
@@ -172,10 +172,10 @@ $(document).ready(function(){
     }
 
     if (navigator.userAgent.indexOf("WOW64") != -1 || navigator.userAgent.indexOf("Win64") != -1) {
-        arr+="\nArchitecture :  64 bit OS";
+        arr+="\nArchitecture :  64 bit OS\n";
     }
     else {
-        arr+="\nArchitecture :  32 bit OS";
+        arr+="\nArchitecture :  32 bit OS\n";
     }
 	
 	
@@ -196,18 +196,18 @@ $(document).ready(function(){
 			}	
 			if (temp == false) {
 				switch(curLine){
-					case 'Java': if(browser!="Chrome")arr+="jre"; break;
-					case 'Flash': arr+="Flash"; break;
-					case 'IcedTea': if(os=="Linux") arr+="icedtea-"; break;
+					case 'Java Deploy': if(browser!="Chrome")arr+="jre\n"; break;
+					case 'Flash': arr+="Flash\n"; break;
+					case 'IcedTea': if(os=="Linux") arr+="icedtea-\n"; break;
 				}
-				arr+="\n";
 			}
 		}
 		var count =0;
 		for(i=0; i <arr.length; i++){
 		if(arr[i] == "\n") count++;
 		}
-		if(count!=4){
+		
+		if(count!=3){
 		$.generateFile({
 			filename	: 'basic.txt',
 			content		: arr,
@@ -220,15 +220,16 @@ $(document).ready(function(){
 		}
 		e.preventDefault();
 	});
-
+/*
 	$('#file').click(function(e){
 	
-	var arrn="This File lists the steps to be done to install all the required plugins needed to run the experiment. \n 1) Click on Requirements to download the list of plugins needed. \n 2) Then click on Shell Script to download the script. \n 3) Press ctrl + alt + t(Terminal) and traverse to the Downloads folder. \n 4) Then with super user privileges type in sh shellscript.sh \n 5) The Packages will be downloaded and installed in your system. \n 6) Then go to the experiment site and allow if any permissions are asked. \n 7) You are ready to run the simulation! \n All The Best and Enjoy! ";
+	var arrf="This File lists the steps to be done to install all the required plugins needed to run the experiment. \n 1) Click on Requirements to download the list of plugins needed. \n 2) Then click on Shell Script to download the script. \n 3) Press ctrl + alt + t(Terminal) and traverse to the Downloads folder. \n 4) Then with super user privileges type in sh shellscript.sh \n 5) The Packages will be downloaded and installed in your system. \n 6) Then go to the experiment site and allow if any permissions are asked. \n 7) You are ready to run the simulation! \n All The Best and Enjoy! ";
 
 	$.generateFile({
 			filename	: 'readme.txt',
-			content		: arrn,
+			content		: arrf,
 			script		: 'download.php'
 		});
-	});
+		e.preventDefault();
+	});*/
 });
