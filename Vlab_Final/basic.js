@@ -86,7 +86,7 @@ $(document).ready(function(){
             browser = navigator.appName;
         }
     }
-    arr+="Browser : " + browser;
+    //arr+="Browser : " + browser;
     // trim the version string
     if ((ix = version.indexOf(';')) != -1) version = version.substring(0, ix);
     if ((ix = version.indexOf(' ')) != -1) version = version.substring(0, ix);
@@ -146,7 +146,7 @@ $(document).ready(function(){
             break;
         }
     }
-    arr+="\nOS : " + os + "";
+    //arr+="\nOS : " + os + "";
 
     var osVersion = unknown;
 
@@ -170,16 +170,17 @@ $(document).ready(function(){
             break;
 
     }
-
+	var Architecture;
     if (navigator.userAgent.indexOf("WOW64") != -1 || navigator.userAgent.indexOf("Win64") != -1) {
-        arr+="\nArchitecture :  64 bit OS\n";
+        Architecture="Architecture :  64 bit OS";
     }
     else {
-        arr+="\nArchitecture :  32 bit OS\n";
+        Architecture="Architecture :  32 bit OS";
     }
 	
 	
 	//Navigator Plugin Checking
+	var count =0;
 	var arrLines = ["Java Deploy","Flash","IcedTea"];
 		for (var i = 0; i < arrLines.length; i++) {
 			var temp = false;
@@ -196,27 +197,35 @@ $(document).ready(function(){
 			}	
 			if (temp == false) {
 				switch(curLine){
-					case 'Java Deploy': if(browser!="Chrome")arr+="jre\n"; break;
-					case 'Flash': arr+="Flash\n"; break;
-					case 'IcedTea': if(os=="Linux") arr+="icedtea-\n"; break;
+					case 'Java Deploy':
+					if(browser!="Chrome")
+						arr+="jre\n";
+						count++;
+					break;
+					case 'Flash':
+					arr+="Flash\n";
+					count++;
+					break;
+					case 'IcedTea': 
+					if(os == "Linux"){
+						arr+="icedtea-\n";
+						count++;
+						alert("icedtea");
+					}	
+					break;
 				}
 			}
 		}
-		var count =0;
-		for(i=0; i <arr.length; i++){
-		if(arr[i] == "\n") count++;
+		if(count==0){
+			alert("You have updated Configuration");
+			window.close();
 		}
-		
-		if(count!=3){
-		$.generateFile({
+		else{
+			$.generateFile({
 			filename	: 'basic.txt',
 			content		: arr,
 			script		: 'download.php'
 		});
-		}
-		else{
-			alert("You have updated Configuration");
-			window.close();
 		}
 		e.preventDefault();
 	});
