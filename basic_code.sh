@@ -70,6 +70,7 @@ export http_proxy=""
 wget -r --no-parent 10.4.15.172/$line/
 cd 10.4.15.172/$line/
 dpkg -i *.deb
+#apt-get install *.deb
 success=`echo $?`
 cd -
 else
