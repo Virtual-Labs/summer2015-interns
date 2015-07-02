@@ -198,7 +198,7 @@ $(document).ready(function(){
 			if (temp == false) {
 				switch(curLine){
 					case 'Java Deploy':
-					if(browser!="Chrome")
+					if(os!="Linux" && browser!="Chrome")
 						arr+="jre\n";
 						count++;
 					break;
@@ -207,10 +207,9 @@ $(document).ready(function(){
 					count++;
 					break;
 					case 'IcedTea': 
-					if(os == "Linux"){
+					if(os == "Linux" && browser!="Chrome"){
 						arr+="icedtea-\n";
 						count++;
-						alert("icedtea");
 					}	
 					break;
 				}

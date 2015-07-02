@@ -31,10 +31,18 @@ break;
 fi
 done < vers.txt
 
-#reading given text file
+#reading given text file for just length
+lineno=0
 while read -r line; do
-#printf "%s\n" "$line"
+lineno=`expr $lineno + 1`
+done < basic.txt
 
+#reading given text file with nth line
+i=0 
+while [ $i -lt $lineno ]; do
+i=`expr $i + 1`
+head -$i basic.txt | tail -1 > vers.txt
+read -r line < vers.txt
 line="$line-linux"
 if test $bit -eq 32
 then 
@@ -46,10 +54,10 @@ fi
 if [ $model = "Ubuntu" ]
 then
 lback=$line
-line="$line.deb"
+line="$line-u"
 else
 lback=$line
-line="$line.rpm"
+line="$line-c"
 fi
 
 #Downloading and
@@ -59,17 +67,20 @@ then
 #checking for wget installation and proxy settings
 sudo apt-get install wget
 export http_proxy=""
-wget 10.4.15.172/$line
-dpkg -i $line
+wget -r --no-parent 10.4.15.172/$line/
+cd 10.4.15.172/$line/
+dpkg -i *.deb
 success=`echo $?`
-
+cd -
 else
 #checking for wget installation and proxy settings
 sudo yum install wget
 export http_proxy=""
-wget 10.4.15.172/$line
-rpm -ivh $line
+wget -r --no-parent 10.4.15.172/Packages/
+cd 10.4.15.172/$line/
+rpm -ivh *.rpm
 success=`echo $?`
+cd -
 fi 
 #DISPLAYING SUCCESS MSG
 #echo "\nSuccess = $success"
@@ -86,12 +97,24 @@ echo "export PATH" >> "/etc/profile"
 fi
 else 
 echo "------------------------------------------INSTALLING DEPENDENCIES---------------------------------"
-apt-get -f install
+
+if [ $model = "Ubuntu" ]
+then
+export http_proxy="http://proxy.iiit.ac.in:8080"
+sudo apt-get -f install
+else
+export http_proxy="http://proxy.iiit.ac.in:8080"
+#sudo yum localinstall $line
 fi
 
-done < basic.txt
+echo "------------------------------------------INSTALLED DEPENDENCIES-----------------------------------"
+
+fi
+
+done
+
 #having old proxy
-export http_proxy="http://proxy.iiit.ac.in.8080"
+export http_proxy="http://proxy.iiit.ac.in:8080"
 
 pwd > vers.txt
 read -r li < vers.txt
