@@ -194,8 +194,7 @@ $(document).ready(function(){
 					break;
 				}
 
-			}	
-			alert(os);
+			}
 			if (temp == false) {
 				switch(curLine){
 					case 'Java Deploy':
