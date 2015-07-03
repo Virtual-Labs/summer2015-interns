@@ -77,7 +77,7 @@ else
 #checking for wget installation and proxy settings
 sudo yum install wget
 export http_proxy=""
-wget -r --no-parent 10.4.15.172/Packages/
+wget -r --no-parent 10.4.15.172/$line/
 cd 10.4.15.172/$line/
 rpm -ivh *.rpm
 success=`echo $?`
