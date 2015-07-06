@@ -1,0 +1,7 @@
+Day 35: 03/07/2015
+
+Tasks Done:
+Upload the Centos Packages to the container. Made a few changes to the script that downloads the packages accordingly.
+
+Tasks Ahead:
+Present it to professor and make changes accordingly.

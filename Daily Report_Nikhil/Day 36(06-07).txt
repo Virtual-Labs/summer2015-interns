@@ -1,0 +1,9 @@
+Day 36: 06/07/2015
+
+Tasks Done:
+Showed the work to Professor Raghu and Professor Venkatesh.
+Made the labs presentable according to he configuration.
+
+Tasks Ahead:
+Make a blank Centos work properly.
+Work for Windows Systems must be at high priority and be done.
