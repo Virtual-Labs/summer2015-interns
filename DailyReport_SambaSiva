@@ -31,3 +31,10 @@ DAY 30 : 23/06/2015 : Prepared the disjoint sets of Labs with four categories an
 DAY 31 : 24/06/2015 : Concluded that labs run on mentioned depencies and Started to check if other versions also facilitate the working of labs
 DAY 32 : 25/06/2015 : Uploaded the sheet containing categories ti Git and checked the validity of Category Java-7 and found it also runs with Java-6
 DAY 33 : 26/06/2015 : Concluded the Basic Configuration and Checking the Working of Basic Configuration in Ubuntu.
+DAY 34 : 29/06/2015 : Installed openVz on Centos and started to check the working of code on created containers 
+DAY 35 : 30/06/2015 : Encountered Problems with dependencies of Java,Iceddtea plugins... Looking for solution on net and taken few suggestions
+DAY 36 : 01/07/2015 : Decided to install all the dependencies of each software  and hence started to collect required Software Packages from apt-get install method in Ubuntu
+DAY 37 : 02/07/2015 : Encountered Problem with script : Unable to ask user whether to download or not ... It is just aborting .. Tried to solve this issue by checking code line by line 
+DAY 38 : 02/07/2015 : Solved the issue . If we replace it with while loop having numerical inequality serves the purpose
+DAY 39 : 03/07/2015 : Tested on Ubuntu containers 64-bit and 32-bit made few changes to code.. Finally Ubuntu is working Fine, Started Checking for centos and left with an issue.
+DAY 40 : 06/07/2015 : Discussed with Prof.Raghu and Prof.Venkatesh and taken their suggestions and started to resolve centos issue.
