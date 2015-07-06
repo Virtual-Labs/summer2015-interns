@@ -11,6 +11,13 @@ body{
 	color:#888;
 	padding:10px;
 }
+.basic{
+	color:red !important ;
+	background-color:red !important ;
+}
+.complete{
+
+}
 .blue{
 	background:url('blue.jfif') no-repeat;
 	text-shadow:1px 1px 1px #277c9b;
@@ -183,7 +190,6 @@ color:#FF2F00;
 #vrlinks{
 font-family:Arial, Helvetica, sans-serif;
 font-size:14px;
-text-decoration:none;
 font-weight:bold;
 color:#430079!important;
 background-image:url(../images/bullet.jpg);
@@ -195,7 +201,6 @@ padding-left:15px;
 }
 
 #vrlinks div a:link, #vrlinks div a:visited, #vrlinks div a:active {
-text-decoration:none;
 color:#430079!important;
 }
 
@@ -239,8 +244,7 @@ text-decoration:none;
 font-family:Arial, Helvetica, sans-serif;
 font-size:14px;
 line-height:20px;
-text-decoration:none;
-color:#055197;
+color:red;
 }
 
 .intrnallink{
@@ -364,7 +368,6 @@ font-weight: bold;
 #vrlinks_left_panel{
 font-family:Arial, Helvetica, sans-serif;
 font-size:13px;
-text-decoration:none;
 font-weight:bold;
 color:#430079!important;
 background-position:11px;
@@ -374,13 +377,11 @@ height:30px;
 }
 
 #vrlinks_left_panel div a:link, #vrlinks_left_panel div a:visited, #vrlinks_left_panel div a:active {
-text-decoration:none;
 color:#430079!important;
 }
 
 #vrlinks_left_panel div a:hover{
 font-size:13px;
-text-decoration:none;
 color:#0965A6 !important;
 }
 
@@ -388,7 +389,6 @@ color:#0965A6 !important;
 #vrlinks_right_panel{
 font-family:Arial, Helvetica, sans-serif;
 font-size:14px;
-text-decoration:none;
 color:#430079!important;
 background-image:url(../images/bullet.jpg);
 background-position:11px;
@@ -399,14 +399,12 @@ padding-left:15px;
 }
 
 #vrlinks_right_panel div a:link, #vrlinks_right_panel div a:visited, #vrlinks_right_panel div a:active {
-text-decoration:none;
 padding-left:15px;
 color:#430079!important;
 }
 
 #vrlinks_right_panel div a:hover{
 font-size:14px;
-text-decoration:none;
 background-position:-4px;
 background-repeat:no-repeat;
 color:#0965A6 !important;
@@ -414,9 +412,9 @@ background-image:url(../images/bullet-hover.jpg);
 }
 
 
-#vrlinks_institute_detail a:hover{
-text-decoration:none;
-color:#000000 !important;
+#vrlinks_institute_detail a{
+color:red !important;
+background-color:red;
 }
 
 .instruction_div
@@ -535,13 +533,6 @@ footer b{
 	font-size: 10px;
 	font-weight: normal;
 }
-
-a, a:visited {
-	text-decoration:none;
-	outline:none;
-	color:#54a6de;
-}
-
 a:hover{
 	text-decoration:underline;
 }

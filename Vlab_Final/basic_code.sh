@@ -22,11 +22,13 @@ done < vers.txt
 cat /etc/issue > vers.txt
 while read -r li; do
 if echo "$li" | grep -q "$model";then
-echo "It is Ubuntu Machine";
+echo "Updating this Ubuntu Machine";
+sudo apt-get update
 break;
 else 
-echo "It is CentOs Machine";
+echo "Updating this CentOs Machine";
 model="Centos"
+sudo yum update
 break;
 fi
 done < vers.txt
@@ -76,11 +78,15 @@ else
 #checking for wget installation and proxy settings
 sudo yum install wget
 export http_proxy=""
-wget -r --no-parent 10.4.15.172/Packages/
+wget -r --no-parent 10.4.15.172/$line/
 cd 10.4.15.172/$line/
-rpm -ivh *.rpm
+echo "HERE !---------------------------------------------------------------------------"
+echo pwd
+yum install *.rpm
+echo "HERE @---------------------------------------------------------------------------"
 success=`echo $?`
 cd -
+echo pwd
 fi 
 #DISPLAYING SUCCESS MSG
 #echo "\nSuccess = $success"
@@ -104,6 +110,7 @@ export http_proxy="http://proxy.iiit.ac.in:8080"
 sudo apt-get -f install
 else
 export http_proxy="http://proxy.iiit.ac.in:8080"
+sudo yum update
 #sudo yum localinstall $line
 fi
 
