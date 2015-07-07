@@ -38,3 +38,4 @@ DAY 37 : 02/07/2015 : Encountered Problem with script : Unable to ask user wheth
 DAY 38 : 02/07/2015 : Solved the issue . If we replace it with while loop having numerical inequality serves the purpose
 DAY 39 : 03/07/2015 : Tested on Ubuntu containers 64-bit and 32-bit made few changes to code.. Finally Ubuntu is working Fine, Started Checking for centos and left with an issue.
 DAY 40 : 06/07/2015 : Discussed with Prof.Raghu and Prof.Venkatesh and taken their suggestions and started to resolve centos issue.
+DAY 41 : 07/07/2015 : Modified Shell Script so that it asks user for configuring which version of java to use
