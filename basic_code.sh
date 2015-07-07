@@ -4,7 +4,7 @@ bit=32
 bitv="x86_64"
 source=".rpm"
 model="Ubuntu"
-extra="jdk"
+extra="jre"
 
 #checking for system version
 uname -m > vers.txt
@@ -40,6 +40,7 @@ lineno=`expr $lineno + 1`
 done < basic.txt
 
 #reading given text file with nth line
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$                           WHILE_LOOP_BEGAN
 i=0 
 while [ $i -lt $lineno ]; do
 i=`expr $i + 1`
@@ -80,30 +81,58 @@ sudo yum install wget
 export http_proxy=""
 wget -r --no-parent 10.4.15.172/$line/
 cd 10.4.15.172/$line/
-echo "HERE !---------------------------------------------------------------------------"
-echo pwd
 yum install *.rpm
-echo "HERE @---------------------------------------------------------------------------"
 success=`echo $?`
 cd -
-echo pwd
 fi 
 #DISPLAYING SUCCESS MSG
 #echo "\nSuccess = $success"
-
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 if test $success -eq 0 
 then
+#--------------------------------------------------------IF_INSTALLED_PART--------------------------------------
+#checking if another version of java is previously installed?
+java -version
+java_result=`echo $?`
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+if test $java_result -eq 0
+then
+#Asking User to select Required Java Version
+echo " Please select $lback version "
+#============================================
+if [ $model = "Centos" ]
+then 
+##---------FOR_CENTOS-----------
+alternatives --config java
 #now to set path...
-if echo "$line" | grep -q "$extra";then
-echo "JAVA_HOME=/usr/lib/jvm/$lback" >> "/etc/profile"
-echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/bin" >> "/etc/profile"
-echo "export JAVA_HOME" >> "/etc/profile" 
-echo "export JRE_HOME" >> "/etc/profile"
-echo "export PATH" >> "/etc/profile" 
+#if echo "$line" | grep -q "$extra";then
+#echo "JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.79.x86_64" >> "/etc/profile"
+#echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/bin" >> "/etc/profile"
+#echo "export JAVA_HOME" >> "/etc/profile" 
+#echo "export JRE_HOME" >> "/etc/profile"
+#echo "export PATH" >> "/etc/profile"
+#fi
+#-------------------------------- 
+else
+##--------FOR_UBUNTU-------------
+alternatives --config java
+#now to set path...
+#if echo "$line" | grep -q "$extra";then
+#echo "JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.79.x86_64" >> "/etc/profile"
+#echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/bin" >> "/etc/profile"
+#echo "export JAVA_HOME" >> "/etc/profile" 
+#echo "export JRE_HOME" >> "/etc/profile"
+#echo "export PATH" >> "/etc/profile"
+#fi
+#--------------------------------
 fi
-else 
+#=============================================
+fi
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+else
+#----------------------------------------------------------NOT_INSTALLED_PART--------------------------------- 
 echo "------------------------------------------INSTALLING DEPENDENCIES---------------------------------"
-
+#++++++++++++++++++++++++++++++++++++++++++++++++
 if [ $model = "Ubuntu" ]
 then
 export http_proxy="http://proxy.iiit.ac.in:8080"
@@ -113,12 +142,13 @@ export http_proxy="http://proxy.iiit.ac.in:8080"
 sudo yum update
 #sudo yum localinstall $line
 fi
-
+#++++++++++++++++++++++++++++++++++++++++++++++++
 echo "------------------------------------------INSTALLED DEPENDENCIES-----------------------------------"
 
 fi
-
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 done
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$                           WHILE_LOOP_FINISHED
 
 #having old proxy
 export http_proxy="http://proxy.iiit.ac.in:8080"
