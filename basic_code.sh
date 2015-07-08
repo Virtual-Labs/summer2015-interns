@@ -81,17 +81,17 @@ if [ $model = "Ubuntu" ]
 then
 #Setting Proxy 
 export http_proxy=""
-wget -r --no-parent 10.4.15.172/$line/
+sudo wget -r --no-parent 10.4.15.172/$line/
 cd 10.4.15.172/$line/
-dpkg -i *.deb
+sudo dpkg -i *.deb
 success=`echo $?`
 cd -
 else
 #Setting Proxy
 export http_proxy=""
-wget -r --no-parent 10.4.15.172/$line/
+sudo wget -r --no-parent 10.4.15.172/$line/
 cd 10.4.15.172/$line/
-yum install *.rpm
+sudo yum install *.rpm
 success=`echo $?`
 cd -
 fi 
@@ -105,7 +105,7 @@ if test $java_result -eq 0                                  #IF_LOOP_START      
 then
 #Asking User to select Required Java Version
 echo " Please select $lback version "
-if [ $model = "Centos" ];then alternatives --config java;else echo "";fi
+if [ $model = "Centos" ];then sudo alternatives --config java;else sudo update-alternatives --config java;fi
 fi                                                          #IF_LOOP_END        *****
            
 if [ $model = "Centos" ]                                    #IF_LOOP_START      =====
@@ -113,25 +113,30 @@ then
 echo ""
 ##---------FOR_CENTOS-----------
 #now to set path...
-#if echo "$line" | grep -q "$extra";then
-#echo "JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.79.x86_64" >> "/etc/profile"
-#echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/bin" >> "/etc/profile"
-#echo "export JAVA_HOME" >> "/etc/profile" 
-#echo "export JRE_HOME" >> "/etc/profile"
-#echo "export PATH" >> "/etc/profile"
-#fi
+if echo "$line" | grep -q "jre-7";then
+if test $bit -eq 64;then echo "JAVA_HOME=/usr/lib/jvm/jre-1.7.0-openjdk.x86_64" >> "/etc/profile" else echo "JAVA_HOME=/usr/lib/jvm/jre-1.7.0-openjdk" >> "/etc/profile" fi
+else
+if test $bit -eq 64;then echo "JAVA_HOME=/usr/lib/jvm/jre-1.6.0-openjdk.x86_64" >> "/etc/profile" else echo "JAVA_HOME=/usr/lib/jvm/jre-1.6.0-openjdk" >> "/etc/profile" fi
+fi
+echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/bin" >> "/etc/profile"
+echo "export JAVA_HOME" >> "/etc/profile" 
+echo "export JRE_HOME" >> "/etc/profile"
+echo "export PATH" >> "/etc/profile"
 #-------------------------------- 
 else
 echo ""
 ##--------FOR_UBUNTU-------------
 #now to set path...
-#if echo "$line" | grep -q "$extra";then
-#echo "JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64" >> "/etc/profile"
-#echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/bin" >> "/etc/profile"
-#echo "export JAVA_HOME" >> "/etc/profile" 
-#echo "export JRE_HOME" >> "/etc/profile"
-#echo "export PATH" >> "/etc/profile"
-#fi
+if echo "$line" | grep -q "jre-6";then
+if test $bit -eq 64;then echo "JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64" >> "/etc/profile" else echo "JAVA_HOME=/usr/lib/jvm/java-6-openjdk-i386" >> "/etc/profile" fi
+else
+if test $bit -eq 64;then echo "JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64" >> "/etc/profile" else echo "JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386" >> "/etc/profile" fi
+fi
+echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/jre/bin" >> "/etc/profile"
+echo "export JAVA_HOME" >> "/etc/profile" 
+echo "export JRE_HOME" >> "/etc/profile"
+echo "export PATH" >> "/etc/profile"
+
 #--------------------------------
 fi                                                          #IF_LOOP_END       =====
 
