@@ -198,9 +198,10 @@ $(document).ready(function(){
 			if (temp == false) {
 				switch(curLine){
 					case 'Java Deploy':
-					if(os!="Linux" && browser!="Chrome")
+					if(os!="Linux" && browser!="Chrome"){
 						arr+="jre\n";
 						count++;
+					}
 					break;
 					case 'Flash':
 					arr+="Flash\n";

@@ -1,3 +1,11 @@
+
+@rem ----- ExeScript Options Begin -----
+@rem ScriptType: console,invoker
+@rem DestDirectory: current
+@rem Icon: none
+@rem OutputFile: N:\Nikhil_Work\test.exe
+@rem 32Bit: yes
+@rem ----- ExeScript Options End -----
 @echo off
 setlocal enableDelayedExpansion
 @echo Checking whether Java is installed or not, This will just take a moment!

@@ -533,6 +533,11 @@ footer b{
 	font-size: 10px;
 	font-weight: normal;
 }
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#54a6de;
+}
 a:hover{
 	text-decoration:underline;
 }
