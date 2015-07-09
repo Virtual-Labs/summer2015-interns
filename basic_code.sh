@@ -47,8 +47,7 @@ done < basic.txt
 
 #reading given text file with nth line
 i=0 
-
-while [ $i -lt $lineno ]; do                                       #WHILE_LOOP_START  $$$$$
+while [ $i -lt $lineno ]; do
 i=`expr $i + 1`
 head -$i basic.txt | tail -1 > vers.txt
 read -r line < vers.txt
@@ -96,72 +95,67 @@ success=`echo $?`
 cd -
 fi 
 
-if test $success -eq 0                                      #IF_LOOP_START      %%%%%
-then
- 
-if echo "$line" | grep -q "$extra";then                     #IF_LOOP_START      @@@@@
-
-if test $java_result -eq 0                                  #IF_LOOP_START      *****
-then
-#Asking User to select Required Java Version
-echo " Please select $lback version "
-if [ $model = "Centos" ];then sudo alternatives --config java;else sudo update-alternatives --config java;fi
-fi                                                          #IF_LOOP_END        *****
-           
-if [ $model = "Centos" ]                                    #IF_LOOP_START      =====
+if [ $success = 0 ]                                    
 then 
-echo ""
-##---------FOR_CENTOS-----------
-#now to set path...
-if echo "$line" | grep -q "jre-7";then
-if test $bit -eq 64;then echo "JAVA_HOME=/usr/lib/jvm/jre-1.7.0-openjdk.x86_64" >> "/etc/profile" else echo "JAVA_HOME=/usr/lib/jvm/jre-1.7.0-openjdk" >> "/etc/profile" fi
-else
-if test $bit -eq 64;then echo "JAVA_HOME=/usr/lib/jvm/jre-1.6.0-openjdk.x86_64" >> "/etc/profile" else echo "JAVA_HOME=/usr/lib/jvm/jre-1.6.0-openjdk" >> "/etc/profile" fi
-fi
-echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/bin" >> "/etc/profile"
-echo "export JAVA_HOME" >> "/etc/profile" 
-echo "export JRE_HOME" >> "/etc/profile"
-echo "export PATH" >> "/etc/profile"
-#-------------------------------- 
-else
-echo ""
-##--------FOR_UBUNTU-------------
-#now to set path...
-if echo "$line" | grep -q "jre-6";then
-if test $bit -eq 64;then echo "JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64" >> "/etc/profile" else echo "JAVA_HOME=/usr/lib/jvm/java-6-openjdk-i386" >> "/etc/profile" fi
-else
-if test $bit -eq 64;then echo "JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64" >> "/etc/profile" else echo "JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386" >> "/etc/profile" fi
-fi
-echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/jre/bin" >> "/etc/profile"
-echo "export JAVA_HOME" >> "/etc/profile" 
-echo "export JRE_HOME" >> "/etc/profile"
-echo "export PATH" >> "/etc/profile"
-
-#--------------------------------
-fi                                                          #IF_LOOP_END       =====
-
-fi                                                          #IF_LOOP_END       @@@@@
- 
+ if echo "$line" | grep -q "$extra"
+ then                     
+  if test $java_result -eq 0                                  
+  then
+  #Asking User to select Required Java Version
+  echo " Please select $lback version "
+   if [ $model = "Centos" ];then sudo alternatives --config java;else sudo update-alternatives --config java;fi
+  fi                                                         
+  if [ $model = "Centos" ]                                    
+  then
+  echo ""
+  ##---------FOR_CENTOS-----------
+  #now to set path...
+   if echo "$line" | grep -q "jre-7"
+   then
+    if test $bit -eq 64;then echo "JAVA_HOME=/usr/lib/jvm/jre-1.7.0-openjdk.x86_64" >> "/etc/profile";else echo "JAVA_HOME=/usr/lib/jvm/jre-1.7.0-openjdk" >> "/etc/profile";fi
+   fi
+   if echo "$line" | grep -q "jre-6"
+   then
+    if test $bit -eq 64;then echo "JAVA_HOME=/usr/lib/jvm/jre-1.6.0-openjdk.x86_64" >> "/etc/profile" else echo "JAVA_HOME=/usr/lib/jvm/jre-1.6.0-openjdk" >> "/etc/profile";fi
+   fi
+   echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/bin" >> "/etc/profile"
+   echo "export JAVA_HOME" >> "/etc/profile" 
+   echo "export JRE_HOME" >> "/etc/profile"
+   echo "export PATH" >> "/etc/profile"
+   #-------------------------------- 
+  fi
+  if [ $model = "Ubuntu" ]
+  then
+  echo ""
+  ##--------FOR_UBUNTU-------------
+  #now to set path...
+   if echo "$line" | grep -q "jre-6";then
+    if test $bit -eq 64;then echo "JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64" >> "/etc/profile" else echo "JAVA_HOME=/usr/lib/jvm/java-6-openjdk-i386" >> "/etc/profile"; fi
+   fi
+   if echo "$line" | grep -q "jre-6";then
+    if test $bit -eq 64;then echo "JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64" >> "/etc/profile" else echo "JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386" >> "/etc/profile"; fi
+   fi
+  echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/jre/bin" >> "/etc/profile"
+  echo "export JAVA_HOME" >> "/etc/profile" 
+  echo "export JRE_HOME" >> "/etc/profile"
+  echo "export PATH" >> "/etc/profile"
+  #--------------------------------
+  fi
+ fi
 else 
-echo "INSTALLING DEPENDENCIES"
-
-if [ $model = "Ubuntu" ]                                    #IF_LOOP_START     +++++
-then
-export http_proxy="http://proxy.iiit.ac.in:8080"
-sudo apt-get -f install
-else
-export http_proxy="http://proxy.iiit.ac.in:8080"
-sudo yum update
-#sudo yum localinstall $line
-fi                                                          #IF_LOOP_END       +++++
-
-echo "INSTALLED DEPENDENCIES"
-
-fi                                                          #IF_LOOP_END       %%%%%
-
-
-done                                                        #WHILE_LOOP_END    $$$$$  
-
+ echo "INSTALLING DEPENDENCIES"
+ if [ $model = "Ubuntu" ]
+ then
+ export http_proxy="http://proxy.iiit.ac.in:8080"
+ sudo apt-get -f install
+ else
+ export http_proxy="http://proxy.iiit.ac.in:8080"
+ sudo yum update
+ #sudo yum localinstall $line
+ fi
+ echo "INSTALLED DEPENDENCIES"
+fi
+done
 #having old proxy
 export http_proxy="http://proxy.iiit.ac.in:8080"
 
