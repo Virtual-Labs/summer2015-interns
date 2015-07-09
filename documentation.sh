@@ -1,9 +1,9 @@
 #+TITLE:     documentation.sh
 #+AUTHOR:    samba
-#+EMAIL:     samba@ubuntu
+#+EMAIL:     psaisambasiva@gmail.com
 #+DATE:      2015-07-09 Thu
-#+DESCRIPTION:
-#+KEYWORDS:
+#+DESCRIPTION:AUTOMATION OF SOFTWARE INSTALLATION ON LINUX MACHINE 
+#+KEYWORDS: BASICALLY INSTALLS SOFTWARES specified in 'basic.txt' file
 #+LANGUAGE:  en
 #+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
