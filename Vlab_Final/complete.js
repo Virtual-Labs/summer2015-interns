@@ -1,11 +1,13 @@
 $(document).ready(function(){
-	
-	
+
+	/** 
+	This segment of the code runs when the download button on the basic configuration page is clicked.
+	*/
 	$('#download').click(function(e){
-
+	/** 
+	Intialising variable arr for storing the missing required plugins
+	*/
 		var arr="";
-		var unknown = 'Unknown';
-
     // screen
     var screenSize = '';
     var width, height;
@@ -15,7 +17,9 @@ $(document).ready(function(){
         screenSize += '' + width + " x " + height;
     }
 
-
+	/**
+	This segment of the JS identifies the type of browser the user is using
+	*/
     //browser
     var nVer = navigator.appVersion;
     var nAgt = navigator.userAgent;
@@ -108,9 +112,14 @@ $(document).ready(function(){
         document.cookie = 'testcookie';
         cookieEnabled = (document.cookie.indexOf('testcookie') != -1);
     }
-
+	/**
+	This segment of the code identifies the type of Operating System the client is using
+	*/
     // system
     var os = unknown;
+	/**
+	The list of possible OS the client may use and the array from which the code compares from
+	*/
     var clientStrings = [
         {s: 'Windows 3.11', r: /Win16/},
         {s: 'Windows 95', r: /(Windows 95|Win95|Windows_95)/},
@@ -139,6 +148,9 @@ $(document).ready(function(){
         {s: 'OS/2', r: /OS\/2/},
         {s: 'Search Bot', r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/}
     ];
+	/**
+	This loop checks the OS from the array which defines the list of Operating System
+	*/
     for (var id in clientStrings) {
         var cs = clientStrings[id];
         if (cs.r.test(nAgt)) {
@@ -170,6 +182,9 @@ $(document).ready(function(){
             break;
 
     }
+	/**
+	To check the Architecture of the System the Client uses
+	*/
 	var Architecture;
     if (navigator.userAgent.indexOf("WOW64") != -1 || navigator.userAgent.indexOf("Win64") != -1) {
         Architecture="Architecture :  64 bit OS";
@@ -178,7 +193,9 @@ $(document).ready(function(){
         Architecture="Architecture :  32 bit OS";
     }
 	
-	
+	/**
+	This loop checks whether the required plugins are installed or not by string comparison between the array and the list Navigator Plugins List
+	*/
 	//Navigator Plugin Checking
 	var count =0;
 	var arrLines = ["Java Deploy","Flash","IcedTea"];
@@ -194,7 +211,7 @@ $(document).ready(function(){
 					break;
 				}
 
-			}
+			}	
 			if (temp == false) {
 				switch(curLine){
 					case 'Java Deploy':
@@ -216,6 +233,7 @@ $(document).ready(function(){
 				}
 			}
 		}
+		alert(count);
 		if(count==0){
 			alert("You have updated Configuration");
 			window.close();
@@ -229,16 +247,4 @@ $(document).ready(function(){
 		}
 		e.preventDefault();
 	});
-/*
-	$('#file').click(function(e){
-	
-	var arrf="This File lists the steps to be done to install all the required plugins needed to run the experiment. \n 1) Click on Requirements to download the list of plugins needed. \n 2) Then click on Shell Script to download the script. \n 3) Press ctrl + alt + t(Terminal) and traverse to the Downloads folder. \n 4) Then with super user privileges type in sh shellscript.sh \n 5) The Packages will be downloaded and installed in your system. \n 6) Then go to the experiment site and allow if any permissions are asked. \n 7) You are ready to run the simulation! \n All The Best and Enjoy! ";
-
-	$.generateFile({
-			filename	: 'readme.txt',
-			content		: arrf,
-			script		: 'download.php'
-		});
-		e.preventDefault();
-	});*/
 });
