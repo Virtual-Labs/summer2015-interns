@@ -27,6 +27,7 @@ bitv="x86_64"
 source=".rpm"
 model="Ubuntu"
 extra="jre"
+java3d="java3d"
 #+END_SRC 
 
 Setting Proxy
@@ -143,11 +144,19 @@ fi
 #+END_SRC
 
 After completion of download and install process of software, checking if the package is not properly installed due to lack of updates
-and if package is Jre, setting path so that it could run applets after its reboot
+and if package is Jre, setting path for java as well as java3dso that it could run applets after its reboot
 
 #+BEGIN_SRC sh
 if [ $success = 0 ]                                    
 then 
+ if echo "$line" | grep -q "$java3d"
+ then
+ #set the path for java-3d
+  if [ $model = "Ubuntu" ];then
+  export CLASSPATH=".:/usr/share/java/j3dcore-1.5.2+dfsg.jar:/usr/share/java/j3dutils-1.5.2+dfsg.jar:/usr/share/java/vecmath-1.5.2.jar"
+  export LD_LIBRARY_PATH="/usr/lib/jni"
+  fi
+ fi
  if echo "$line" | grep -q "$extra"
  then                     
   if test $java_result -eq 0                                  
