@@ -5,6 +5,7 @@ bitv="x86_64"
 source=".rpm"
 model="Ubuntu"
 extra="jre"
+java3d="java3d"
 
 #setting proxy
 export http_proxy="proxy.iiit.ac.in:8080"
@@ -96,7 +97,15 @@ cd -
 fi 
 
 if [ $success = 0 ]                                    
-then 
+then
+ if echo "$line" | grep -q "$java3d"
+ then
+ #set the path for java-3d
+  if [ $model = "Ubuntu" ];then
+  export CLASSPATH=".:/usr/share/java/j3dcore-1.5.2+dfsg.jar:/usr/share/java/j3dutils-1.5.2+dfsg.jar:/usr/share/java/vecmath-1.5.2.jar"
+  export LD_LIBRARY_PATH="/usr/lib/jni"
+  fi
+ fi
  if echo "$line" | grep -q "$extra"
  then                     
   if test $java_result -eq 0                                  
