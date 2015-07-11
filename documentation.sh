@@ -101,6 +101,7 @@ java_result=`echo $?`
 Decoding the required package name from given requirement software name
 
 #+BEGIN_SRC sh
+name="$line"
 line="$line-linux"
 
 if test $bit -eq 32
@@ -149,6 +150,7 @@ and if package is Jre, setting path for java as well as java3dso that it could r
 #+BEGIN_SRC sh
 if [ $success = 0 ]                                    
 then 
+ echo "INSTALLATION PROCESS OF '$name' IS DONE"
  if echo "$line" | grep -q "$java3d"
  then
  #set the path for java-3d
