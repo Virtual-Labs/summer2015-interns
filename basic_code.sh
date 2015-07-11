@@ -28,14 +28,14 @@ cat /etc/issue > vers.txt
 while read -r li; do
 if echo "$li" | grep -q "$model";then
 echo "Updating this Ubuntu Machine";
-sudo apt-get update
-sudo apt-get install wget
+sudo apt-get update >> debugg.txt
+sudo apt-get install wget >> debugg.txt
 break;
 else 
 echo "Updating this CentOs Machine";
 model="Centos"
-sudo yum update
-sudo yum install wget
+sudo yum update >> debugg.txt
+sudo yum install wget >> debugg.txt
 break;
 fi
 done < vers.txt
@@ -57,6 +57,7 @@ read -r line < vers.txt
 java -version
 java_result=`echo $?`
 
+name=line
 line="$line-linux"
 
 if test $bit -eq 32
@@ -81,23 +82,24 @@ if [ $model = "Ubuntu" ]
 then
 #Setting Proxy 
 export http_proxy=""
-sudo wget -r --no-parent 10.4.15.172/$line/
+sudo wget -r --no-parent 10.4.15.172/$line/ >> debugg.txt
 cd 10.4.15.172/$line/
-sudo dpkg -i *.deb
+sudo dpkg -i *.deb >> debug.txt
 success=`echo $?`
 cd -
 else
 #Setting Proxy
 export http_proxy=""
-sudo wget -r --no-parent 10.4.15.172/$line/
+sudo wget -r --no-parent 10.4.15.172/$line/ >> debugg.txt
 cd 10.4.15.172/$line/
-sudo yum install *.rpm
+sudo yum install *.rpm >> debugg.txt
 success=`echo $?`
 cd -
 fi 
 
 if [ $success = 0 ]                                    
 then
+ echo "INSTALLATION PROCESS OF '$name' IS DONE"
  if echo "$line" | grep -q "$java3d"
  then
  #set the path for java-3d
@@ -156,10 +158,10 @@ else
  if [ $model = "Ubuntu" ]
  then
  export http_proxy="http://proxy.iiit.ac.in:8080"
- sudo apt-get -f install
+ sudo apt-get -f install >> debugg.txt
  else
  export http_proxy="http://proxy.iiit.ac.in:8080"
- sudo yum update
+ sudo yum update >> debugg.txt
  #sudo yum localinstall $line
  fi
  echo "INSTALLED DEPENDENCIES"
