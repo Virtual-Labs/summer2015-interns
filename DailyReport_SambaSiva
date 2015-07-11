@@ -41,7 +41,7 @@ DAY 40 : 06/07/2015 : Discussed with Prof.Raghu and Prof.Venkatesh and taken the
 DAY 41 : 07/07/2015 : Modified Shell Script so that it asks user for configuring which version of java to use
 DAY 42 : 08/07/2015 : Updated Shell Script so that it van handle multiple java versions and automatically sets path for users
 DAY 43 : 09/07/2015 : Downloaded and hosted java-3d packages for both ubuntu,centos systems[32-bit,64-bit];Also documented entire shell-script and uploaded to Git
-DAY 44 : 10/07/2015 : 
+DAY 44 : 10/07/2015 : Started embedding the code in labs site and updated script to display Messages
 DAY 45 : 13/07/2015 : 
 DAY 46 : 14/07/2015 : 
 DAY 47 : 15/07/2015 : 
