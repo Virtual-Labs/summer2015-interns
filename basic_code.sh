@@ -57,7 +57,7 @@ read -r line < vers.txt
 java -version
 java_result=`echo $?`
 
-name=line
+name="$line"
 line="$line-linux"
 
 if test $bit -eq 32
