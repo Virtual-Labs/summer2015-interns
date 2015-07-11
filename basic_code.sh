@@ -28,14 +28,14 @@ cat /etc/issue > vers.txt
 while read -r li; do
 if echo "$li" | grep -q "$model";then
 echo "Updating this Ubuntu Machine";
-sudo apt-get update >> debugg.txt
-sudo apt-get install wget >> debugg.txt
+sudo apt-get update
+sudo apt-get install wget
 break;
 else 
 echo "Updating this CentOs Machine";
 model="Centos"
-sudo yum update >> debugg.txt
-sudo yum install wget >> debugg.txt
+sudo yum update
+sudo yum install wget
 break;
 fi
 done < vers.txt
@@ -82,17 +82,17 @@ if [ $model = "Ubuntu" ]
 then
 #Setting Proxy 
 export http_proxy=""
-sudo wget -r --no-parent 10.4.15.172/$line/ >> debugg.txt
+sudo wget -r --no-parent 10.4.15.172/$line/
 cd 10.4.15.172/$line/
-sudo dpkg -i *.deb >> debug.txt
+sudo dpkg -i *.deb
 success=`echo $?`
 cd -
 else
 #Setting Proxy
 export http_proxy=""
-sudo wget -r --no-parent 10.4.15.172/$line/ >> debugg.txt
+sudo wget -r --no-parent 10.4.15.172/$line/
 cd 10.4.15.172/$line/
-sudo yum install *.rpm >> debugg.txt
+sudo yum install *.rpm
 success=`echo $?`
 cd -
 fi 
@@ -158,10 +158,10 @@ else
  if [ $model = "Ubuntu" ]
  then
  export http_proxy="http://proxy.iiit.ac.in:8080"
- sudo apt-get -f install >> debugg.txt
+ sudo apt-get -f install
  else
  export http_proxy="http://proxy.iiit.ac.in:8080"
- sudo yum update >> debugg.txt
+ sudo yum update
  #sudo yum localinstall $line
  fi
  echo "INSTALLED DEPENDENCIES"
