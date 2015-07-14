@@ -42,8 +42,10 @@ $(document).ready(function(){
         version = nAgt.substring(verOffset + 5);
     }
 
-    //IE 11 no longer identifies itself as MS IE, so trap it
-    //http://stackoverflow.com/questions/17907445/how-to-detect-ie11
+    /**
+	IE 11 no longer identifies itself as MS IE, so trap it
+    http://stackoverflow.com/questions/17907445/how-to-detect-ie11
+	*/
     else if ((browser == 'Netscape') && (nAgt.indexOf('Trident/') != -1)) {
 
         browser = 'Microsoft Internet Explorer';
@@ -67,10 +69,11 @@ $(document).ready(function(){
             version = nAgt.substring(verOffset + 8);
         }
 
-        // Chrome on iPad identifies itself as Safari. Actual results do not match what Google claims
-        //  at: https://developers.google.com/chrome/mobile/docs/user-agent?hl=ja
-        //  No mention of chrome in the user agent string. However it does mention CriOS, which presumably
-        //  can be keyed on to detect it.
+        /** Chrome on iPad identifies itself as Safari. Actual results do not match what Google claims
+			at: https://developers.google.com/chrome/mobile/docs/user-agent?hl=ja
+			No mention of chrome in the user agent string. However it does mention CriOS, which presumably
+			can be keyed on to detect it.
+		*/
         if (nAgt.indexOf('CriOS') != -1) {
             //Chrome on iPad spoofing Safari...correct it.
             browser = 'Chrome';
@@ -90,7 +93,7 @@ $(document).ready(function(){
             browser = navigator.appName;
         }
     }
-    //arr+="Browser : " + browser;
+    
     // trim the version string
     if ((ix = version.indexOf(';')) != -1) version = version.substring(0, ix);
     if ((ix = version.indexOf(' ')) != -1) version = version.substring(0, ix);
@@ -158,8 +161,10 @@ $(document).ready(function(){
             break;
         }
     }
-    //arr+="\nOS : " + os + "";
-
+	
+    /**
+	This segment of the JS identifies the version of OS the user is using
+	*/
     var osVersion = "unknown";
 
     if (/Windows/.test(os)) {
@@ -194,7 +199,7 @@ $(document).ready(function(){
     }
 	
 	/**
-	This loop checks whether the required plugins are installed or not by string comparison between the array and the list Navigator Plugins List
+	This loop checks whether the required plugins are installed or not by string comparison between the array and the list Navigator Plugins List.
 	*/
 	//Navigator Plugin Checking
 	var count =0;
@@ -211,7 +216,10 @@ $(document).ready(function(){
 					break;
 				}
 
-			}	
+			}
+			/**
+			This if is true when a plugin required is not found in the list of installed plugins of the user's browser.
+			*/
 			if (temp == false) {
 				switch(curLine){
 					case 'Java Deploy':
@@ -220,8 +228,8 @@ $(document).ready(function(){
 						count++;
 					}
 					break;
-					case 'Flash':
-					arr+="Flash\n";
+					case 'flash':
+					arr+="flash\n";
 					count++;
 					break;
 					case 'IcedTea': 
@@ -233,6 +241,16 @@ $(document).ready(function(){
 				}
 			}
 		}
+		/**
+		If the Java 3D checkbox is checked, the array for requirements.txt adds java3d\n
+		*/
+		if (document.getElementById('j3d').checked) {
+            arr+="java3d\n";
+			count++;
+        }
+		/**
+		The count is 0 when all the required plugins are present. It increments when even a single required plugin is not present
+		*/
 		if(count==0){
 			alert("You have updated Configuration");
 			window.close();
