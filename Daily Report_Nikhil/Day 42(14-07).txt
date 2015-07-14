@@ -1,0 +1,8 @@
+Day 42: 14/07/2015
+
+Tasks Done:
+Document all the js and script files.
+Made a successful addition of our codes to a Lab running on local Machine.
+
+Tasks Ahead:
+Figure how a container works and host all of our packages and scripts there and make them work even if the container is made public.

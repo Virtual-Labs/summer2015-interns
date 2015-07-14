@@ -1,0 +1,7 @@
+Day 39: 09/07/2015
+
+Tasks Done:
+Made a js file which checks whether flash and java are installed or not by invoking a seperate js functions present on Java site and with the help of this helping the user download the specific exe for installation.
+
+Tasks Ahead:
+Write specific batch script for each configuration of Architecture and plugins installed and make an exe file out of them.
