@@ -70,7 +70,7 @@ line="$line-linux"
 if test $bit -eq 32
 then 
 line="$line-x86"
-else
+else 
 line="$line-x64"
 fi 
 
