@@ -89,7 +89,7 @@ if [ $model = "Ubuntu" ]
 then
 #Setting Proxy 
 export http_proxy=""
-sudo wget -r --no-parent 10.4.15.172/$line/
+sudo wget -r --no-parent http://vlabs-dependencies.virtual-labs.ac.in/$line/
 cd 10.4.15.172/$line/
 sudo dpkg -i *.deb
 success=`echo $?`
@@ -97,7 +97,7 @@ cd -
 else
 #Setting Proxy
 export http_proxy=""
-sudo wget -r --no-parent 10.4.15.172/$line/
+sudo wget -r --no-parent http://vlabs-dependencies.virtual-labs.ac.in/$line/
 cd 10.4.15.172/$line/
 sudo yum install *.rpm
 success=`echo $?`
