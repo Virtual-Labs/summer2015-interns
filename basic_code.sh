@@ -8,8 +8,12 @@ extra="jre"
 java3d="java3d"
 
 #setting proxy
-export http_proxy="proxy.iiit.ac.in:8080"
-export https_proxy="proxy.iiit.ac.in:8080"
+echo "ENTER YOUR HTTP PROXY : "
+read proxy
+echo "ENTER YOUR PROXY PORT"
+read port
+export http_proxy="$proxy:$port"
+export https_proxy="$proxy:$port"
 
 #checking for system version
 uname -m > vers.txt
@@ -160,10 +164,12 @@ else
  echo "INSTALLING DEPENDENCIES"
  if [ $model = "Ubuntu" ]
  then
- export http_proxy="http://proxy.iiit.ac.in:8080"
+ export http_proxy="$proxy:$port"
+ export https_proxy="$proxy:$port"
  sudo apt-get -f install
  else
- export http_proxy="http://proxy.iiit.ac.in:8080"
+ export http_proxy="$proxy:$port"
+ export https_proxy="$proxy:$port"
  sudo yum update
  #sudo yum localinstall $line
  fi
@@ -171,7 +177,8 @@ else
 fi
 done
 #having old proxy
-export http_proxy="http://proxy.iiit.ac.in:8080"
+export http_proxy="$proxy:$port"
+export https_proxy="$proxy:$port"
 
 pwd > vers.txt
 read -r li < vers.txt
