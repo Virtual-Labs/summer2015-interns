@@ -1,5 +1,0 @@
-Minutes of meeting :
-1. Implement disjoint sets of requirements
-2. Determine which all versions of java are suitable for every experiment
-3. Modify source code (using stack-trace) of Jre-1.7, so that it is compatible with Java-3D api   
-4. Run a stacktrace to verify the version of the java and its compatibility with icedtea plugin and Java 3D api.    
