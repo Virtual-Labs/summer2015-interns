@@ -1,7 +1,0 @@
-Day 24: 18/06/2015
-
-Tasks Done:
-Thought of a workflow via which the plugins may be installed and drew a flow chart on how to proceed with the process.
-
-Tasks Ahead:
-Implement the process thought of in the workflow and discuss with soujanya on how to proceed on implementation. 
