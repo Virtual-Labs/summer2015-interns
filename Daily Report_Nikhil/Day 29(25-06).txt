@@ -1,6 +1,0 @@
-Day 29: 25/06/2015
-Tasks Done:
-Redefined the list of requirements since there were minor compatibility issues and uploaded the sheet to git.
-
-Tasks Ahead:
-Based on the sheet make a basic configuration and upload this to the container and configure the shell script to read it in a specified way.
