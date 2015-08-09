@@ -12,13 +12,16 @@
     </head>
     
     <body>   
+	<!-- This div is used for displaying the check button and checking for java-3d -->
 	<div id="check-div">
+	<!-- Java-3D Check link -->
 	<div id="j3d-linux" style="display:none">
-	<base target="_blank" /><a href="http://www.java3d.org/howto.html" target="_blank">Click  here</a> to check whether Java-3d in 		working on your system or not <br/>
+	<base target="_blank" /><a href="http://www.java3d.org/howto.html" target="_blank">Click  here</a> to check whether Java-3d in 	working on your system or not <br/>
 	<!-- CheckBox for including Java3D package for linux-->
 	<input type="checkbox" id="j3d-ubuntu"> Check this box to install Java 3D
 	</div><br/>
 	Please Click on below button to check whether you have the required configuration. <br/> <br/>
+	<!-- The button checks for missing plugins -->
 	 <button type="button" id="check" class="blueButton">Check</button> 
 	 </div>
 		<!-- The Text specific to the client's configuration gets added -->
@@ -31,11 +34,12 @@
 		<a href='http://vlabs-dependencies.virtual-labs.ac.in/Install_Java-Windows.exe' id='j' style='display:none;text-decoration:none;font-size:15px;'>Install Java: Click this link to install Java specific to your System Configuration. </a>
 		<!-- Link for Flash for windows -->
 		<a href='http://vlabs-dependencies.virtual-labs.ac.in/Install_Flash-Windows.exe' id='f' style='display:none;text-decoration:none;font-size:15px;'>Install Flash: Click this link to install Flash specific to your System Configuration. </a>
+		<!-- The steps to be followed by the user if any plugin is not present are listed here -->
 		<br/><br/>Follow the steps to install all the required plugins needed to run the experiment.
 		<br/>1) Click on the above link to download the set of programs set to your configuration.
 		<br/>2) After downloading, run the .exe file with administrator privileges.
 		<br/>3) Once the softwares are installed please proceed to the experiment site to run the simulation.
-		<br/>4) If Java was installed you need to add the site to the exception list which is found when you type 'configure java' in 			start and then proceed to Security tab. In exception Site List, click on Edit site list and add the experiment URL in the 			list and restart the browser.
+		<br/>4) If Java was installed you need to add the site to the exception list which is found when you type 'configure java' in start and then proceed to Security tab. In exception Site List, click on Edit site list and add the experiment URL in the list and restart the browser.
 		<br/>
 		</div>
 		<div id="requirements-linux" style="display:none;">
@@ -48,7 +52,7 @@
 		Click here to generate requirements list</a>
 		<br/>2) Then click on below link to download the shell script.(Depends on the above file!) <br/>
 		<!-- To download the shell script that is present on a container which downloads and installs the missing plugins -->
-		<a href='http://vlabs-dependencies.virtual-labs.ac.in/script.sh' style='font-size:15px;text-decoration:none;'>Click here to 			download the script</a>
+		<a href='http://vlabs-dependencies.virtual-labs.ac.in/script.sh' style='font-size:15px;text-decoration:none;'>Click here to download the script</a>
 		<br/>3) Open Terminal and traverse to the Downloads folder.
 		<br/>4) Then with super user privileges type in sh shellscript.sh
 		<br/>5) The Packages will be downloaded and installed in your system.
@@ -56,26 +60,32 @@
 		<br/>7) You are ready to run the simulation!
 		<br/>
 		</div>
+		<!-- Java-3D installation links for windows -->
 		<div id="java-3d">
 		<!-- Link for Java-3D 32-bit for windows -->
 		<a href='http://vlabs-dependencies.virtual-labs.ac.in/j3d_win32.EXE' id='j3d-32' style='display:none;text-decoration:none;font-size:15px;'>Install Dependencies: Click this link to install Java-3D for 32-Bit.</a>
 		<!-- Link for Java-3D 32-bit for windows -->
 		<a href='http://vlabs-dependencies.virtual-labs.ac.in/j3d_win64.EXE' id='j3d-32' style='display:none;text-decoration:none;font-size:15px;'>Install Dependencies: Click this link to install Java-3D for 64-Bit.</a>
 		</div>
+		<!-- The div which is used when all the plugins required are present -->
 		<div id="req-config" style="display:none;">
 		<b>You have updated Configuration. Please proceed to the experiment site!</b>
 		</div>
+		<!-- This div is used for verifying the installation of softwares -->
 		<div id="test-links">
 		<br/>
 		If you have installed all the softwares required. Please visit the following links to verify the installation. <br/> <br/>
+		<!-- Link for Flash -->
 		<base target="_blank" /><a href="https://www.whatismybrowser.com/is-flash-installed" style="display:inline-block" target="_blank"> Verify Flash</a> &nbsp; &nbsp;
+		<!-- Link for Java -->
 		<base target="_blank" /><a href="https://www.java.com/en/download/installed.jsp" style="display:inline-block" target="_blank"> Verify Java </a> &nbsp; &nbsp;
+		<!-- Link for Java-3D which is hidden unless a lab requires it, it can be shown by changing the style below --->
 		<base target="_blank" /><a href="http://www.java3d.org/howto.html" style="display:none" target="_blank">Verify Java-3D</a>
 		</div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 		<!-- Jquery file for generation of file -->
         <script src="jquery.generateFile.js"></script>
-		<!-- JS file which checks for Windows requirements -->
+		<!-- JS file which checks for Requirements -->
         <script src="plugin.js"></script>
     </body>
 </html>

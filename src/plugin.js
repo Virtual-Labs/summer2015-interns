@@ -1,14 +1,14 @@
 $(document).ready(function(){
 	/** 
-	This segment of the code runs when the check button on the basic configuration page is clicked.
+	This segment of the code runs when the check button on the plugins.html iframe is clicked.
 	*/
 	$('#check').click(function(){
 		/**
-		If the OS is Windows, it has unique set of steps to be followed by the user
+		Checks for the type of Operating System the user is using. If the OS is Windows, it has unique set of steps to be followed by the user.
 		*/
 		if (navigator.userAgent.indexOf("Windows") != -1) {
 			/**
-			Variable for flash plugins
+			Variable for whether flash plugin is installed or not
 			*/
 			var hasFlash = false;
 			try {
@@ -30,33 +30,33 @@ $(document).ready(function(){
 							}
 					}
 		/**
-		The div where the text specific to the client's configuration gets added
+		The div where the steps specific to the client's OS gets added.
 		*/
 		var div = document.getElementById('requirements-win');
 		
 		/**
-		If both Flash and Java are not present
+		If both Flash and Java are not present on the user's system
 		*/
 		if (!hasFlash && !deployJava.versionCheck("1.6.0+")){
-				$('#requirements-win').show();
-				$('#jf').show();
+				$('#requirements-win').show(); //Here the steps specific to be followed by the Windows User will be listed.
+				$('#jf').show(); //The link specific to java and flash not being present will be shown
 		}
 		/**
-		If Only Java is not present
+		If Only Java is not present on the user's system
 		*/
 		else if (!deployJava.versionCheck("1.6.0+")){
-				$('#requirements-win').show();
-				$('#j').show();
+				$('#requirements-win').show(); //Here the steps specific to be followed by the Windows User will be listed.
+				$('#j').show(); //The link specific to java not being present will be shown
 		}
 		/**
-		If Only Flash is not present
+		If Only Flash is not present on the user's system
 		*/
 		else if (!hasFlash){
-				$('#requirements-win').show();
-				$('#f').show();
+				$('#requirements-win').show(); //Here the steps specific to be followed by the Windows User will be listed.
+				$('#f').show(); //The link specific to flash not being present will be shown
 		}
 		/**
-		If all the plugins are present
+		If all the plugins are present on the user's system, it makes a separate div which is used for showing updated configuration visible 
 		*/
 		else{
 			$('#req-config').show();
@@ -65,7 +65,7 @@ $(document).ready(function(){
 		$( '#check-div' ).detach();
 	}
 	/**
-	If the OS is Linux, it has unique set of steps to be followed by the user and the a separate process that the js file does
+	If the OS is Linux, it has unique set of steps to be followed by the user and the a separate process that the js file does.
 	*/
 	else{
 		// screen
