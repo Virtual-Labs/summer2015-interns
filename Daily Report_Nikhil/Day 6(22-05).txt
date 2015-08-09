@@ -1,8 +1,0 @@
-Day 6: 22/05/2015
-Tasks Done:
-
-Finished Documenting about Installing Java 3D on Ubuntu and Almost done doing the same on Centos Systems.
-
-Tasks Ahead:
-
-Document the process of installing Java 3D on Centos.
