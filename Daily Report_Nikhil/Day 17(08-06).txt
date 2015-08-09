@@ -1,6 +1,0 @@
-Day 17: 08/06/2015
-Tasks Done:
-Collate the separate javascript codes into a single one.
-
-Tasks Ahead:
-Make the single code work as it is facing few problems in working on the server side.
