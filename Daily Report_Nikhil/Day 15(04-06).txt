@@ -1,6 +1,0 @@
-Day 15: 04/06/2015
-Tasks Done:
-Configured a demo server on the local machine and tested the javascript code on the demo server.
-
-Tasks Ahead:
-Take up a lab and test the written code and make the code more generic.
