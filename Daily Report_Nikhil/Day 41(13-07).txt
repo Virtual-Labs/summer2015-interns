@@ -1,7 +1,0 @@
-Day 41: 13/07/2015
-
-Tasks Done:
-Modified the php file to parse the js code and make changes accordingly.
-
-Tasks Ahead:
-Include all of the source codes and exe files to the lab sources.
