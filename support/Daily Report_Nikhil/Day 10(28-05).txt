@@ -1,0 +1,8 @@
+Day 10: 28/05/2015
+Tasks Done:
+
+Configuring the scripts to display the list of plugins installed.
+
+Tasks Ahead:
+
+Configuring the scripts to display the list of plugins required.

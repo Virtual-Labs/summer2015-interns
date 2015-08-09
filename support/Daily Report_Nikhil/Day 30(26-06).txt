@@ -1,0 +1,6 @@
+Day 30: 26/06/2015
+Tasks Done:
+Prepared the basic configuration and made changes to the script to download the specific basic configuration packages and its dependencies.
+
+Tasks Ahead:
+Test the codes on Vlab main site

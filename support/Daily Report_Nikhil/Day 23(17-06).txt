@@ -1,0 +1,6 @@
+Day 23: 17/06/2015
+Tasks Done:
+Listed out the client side dependencies for 36 labs and filtered out the ones which occurs often and consider it as a minimal/basic configuration.
+
+Tasks Ahead:
+Run Javascript code which validates whether the basic configuration would satisfy the labs requirements.

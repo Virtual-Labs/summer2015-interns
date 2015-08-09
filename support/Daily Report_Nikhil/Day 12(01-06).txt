@@ -1,0 +1,10 @@
+Day 12: 01/06/2015
+Tasks Done:
+
+Configuring the scripts to display the list of plugins required. 
+
+Tasks Ahead:
+
+Compare the requirements with list of plugins installed.
+
+Write a shell script that downloads and installs the required softwares.

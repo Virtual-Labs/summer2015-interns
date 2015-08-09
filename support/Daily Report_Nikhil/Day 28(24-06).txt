@@ -1,0 +1,6 @@
+Day 28: 24/06/2015
+Tasks Done:
+Uploaded the required packages on the container with respect to the OS and Architecture.
+
+Tasks Ahead:
+Make the basic configuration according to hte compatibility.

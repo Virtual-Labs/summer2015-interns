@@ -1,0 +1,64 @@
+Labs run with just Flash Plugin :(in first 20 Labs)
+Data Structures
+
+Labs run with just Flash Plugin :(in next 16 Labs)
+Colloid and Surface Chemistry
+Molecular Absorption Spectroscopy
+Optical Remote Sensing
+Molecular Florescence Spectroscopy
+Circular Dichronism
+======================================================================
+Labs run without any Plugins : (in first 20 Labs)
+Linux Lab
+Principles of Programming Languages
+Problem Solving
+Image Processing
+Cryptology
+Data Mining
+
+Labs run without any plugin :(in next 16 Labs)
+Natural Language Processing
+Computational Linguistics
+Soil Mechanics and Foundation Engineering
+Basic Structural Analysis
+Analog CMOs VLSI Circuit Design
+Mobile Robotics
+======================================================================
+Labs which require Java(1.7)+IcedTeaPlugin : (in first 20 Labs)
+Artificial Neural Networks
+Computer Graphics
+Digital Logic Design
+Computer Programming
+Computer Organisation (Also require Flash)
+Pattern Recognisation
+=======================================================================
+Labs which require Java(1.6)+IcedTeaPlugin(1.7.65)+Java-3D(1.5.2) : (in first 20 Labs)
+Basic Engineering Mechanics and Strength of Materials 
+Physical Sciences 
+Physical Chemistry (Also require Flash)
+Databases (Also require Flash)
+Hydraulics and Fluid Mechanics
+=========================================================================
+Lab which require Java(1.6)+IcedTeaPlugin(1.7.65)+Waveform : (in first 20 Labs)
+VLSI 
+=========================================================================
+Lab which require Java(1.6)+IcedTeaPlugin(2.5.3)+Java-3D(1.5.2) : (in first 20 Labs)
+EM Theory
+=========================================================================
+
+TOTAL ANALYSIS :(First Set of Labs)
+1.Only Flash          : 1
+2.No Plugins required : 6
+3.Java-7 Category     : 6
+4.Java-6 Category     : 5
+5.Miscellaneous       : 2
+----------------------------
+ TOTAL                : 20
+----------------------------
+
+
+
+
+
+
+
