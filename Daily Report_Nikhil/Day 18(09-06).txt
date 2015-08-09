@@ -1,6 +1,0 @@
-Day 18: 09/06/2015
-Tasks Done:
-Write a shell script that reads a file and its contents in a required format
-
-Tasks Ahead:
-Make this script ping a container and download what's present.
