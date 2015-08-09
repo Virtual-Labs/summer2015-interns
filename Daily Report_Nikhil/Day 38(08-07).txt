@@ -1,7 +1,0 @@
-Day 38: 08/07/2015
-
-Tasks Done:
-Made the batch script to delete the packages downloaded and set Java path automatically without user intrusion.
-
-Tasks Ahead:
-Make seperate according to the configuration exe files as said by Prof. Raghu and also include the batch script.
