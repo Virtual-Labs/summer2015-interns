@@ -1,6 +1,0 @@
-Day 14: 03/06/2015
-Tasks Done:
-Configure a shell script to run automatically and read a text file.
-
-Tasks Ahead:
-Taking that text file as input and install the requirements needed as per the text file.
