@@ -1,6 +1,0 @@
-Day 34: 02/07/2015
-Tasks Done:
-Uploaded Ubuntu 32 bit Packages onto the container at 10.4.15.172 and modified the main display page and include java 3d installation procedure and it's implementation.
-
-Tasks Ahead;
-Upload Centos Packages and present it to Professor.
