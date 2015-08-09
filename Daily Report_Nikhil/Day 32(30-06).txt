@@ -1,6 +1,0 @@
-Day 32: 30/06/2015
-Tasks Done:
-Wrote a Batch script that lists out the softwares installed on Windows System and check whether java is installed or not.
-
-Tasks Ahead:
-Incorporate the steps to do for Windows system on the site.
