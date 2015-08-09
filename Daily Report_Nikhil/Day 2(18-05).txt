@@ -1,8 +1,0 @@
-Day 2: 18/05/2015
-Tasks Done:
-
-Installed Java 3D(JRE + JDK + J3d) on Windows 7 Systems and checked the errors and exceptions generated on the devices when running a simulator or applet that uses JAVA 3D.
-
-Tasks Ahead:
-
-To pursue the errors and warnings and verify them and find a safe way or method to install JAVA 3D on Linux Systems.
