@@ -1,7 +1,0 @@
-Day 40: 10/07/2015
-
-Tasks Done:
-Succefully created the exe files including the specific packages and batch scripts. Included part of our scripts in the Computer Organzation Lab.
-
-Tasks Ahead:
-The make file isnt recognizing the changes we make in the html files. Find a solution for that.
