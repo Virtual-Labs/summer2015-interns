@@ -1,7 +1,0 @@
-Day 25: 19/06/2015
-
-Tasks Done:
-Studied the website of IIIT-H vlab site and thought of a process of including the buttons to install the plugins.
-
-Tasks Ahead:
-Start incorporating the workflow into the actual vlab site.
