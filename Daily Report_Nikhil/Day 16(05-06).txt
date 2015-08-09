@@ -1,6 +1,0 @@
-Day 16: 05/06/2015
-Tasks Done:
-Let the code write the plugins required which are not installed on the client's machine in a text file.
-
-Tasks Ahead:
-Allow the code to let the text file be downloaded on the server which can be read by the shell script.
