@@ -1,6 +1,0 @@
-Day 27: 23/06/2015
-Tasks Done:
-Prepared the disjoint sets of Labs with respect to the plugins required(4) and checked their validity with respect to the configurations.
-
-Tasks Ahead:
-Check if other versions also are compatible with the existing labs.
