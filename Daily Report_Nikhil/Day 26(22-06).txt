@@ -1,9 +1,0 @@
-Day 26: 22/06/2015
-
-Tasks Done:
-Had a meeting with Professor discussing about implementing the process of automation. Suggested a few ideas which are listed ahead.
-The First Step in the process of including the buttons and script verification is done.
-
-Tasks Ahead:
-Create Disjoint set of plugins and use different packages for each lab.
-Run a stacktrace to verify the version of the java and its compatibility with icedtea plugin and Java 3D api.
