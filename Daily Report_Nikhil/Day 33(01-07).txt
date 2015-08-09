@@ -1,6 +1,0 @@
-Day 33: 01/07/2015
-Tasks Done:
-Made changes to the html and js to incorporate the steps to do for the windows system and include required version of Java and Java 3d packages since they were no longer available to download.
-
-Tasks Ahead:
-Make the website more presentable and optimize the codes.
