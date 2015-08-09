@@ -1,6 +1,0 @@
-Day 31: 29/06/2015
-Tasks Done:
-Updated the two button model for installing the dependencies with new.
-
-Tasks Ahead:
-Start the process for Windows Systems.
