@@ -1,8 +1,0 @@
-Day 37: 07/07/2015
-
-Tasks Done:
-Made a batch script to check whether is Java installed and it's version. 
-Configured the script to install a tool and using this tool download the packages hosted on container.
-
-Tasks Ahead:
-After downloading the packages, install them, set the java path and remove them.
