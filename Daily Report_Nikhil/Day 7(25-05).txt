@@ -1,8 +1,0 @@
-Day 7: 25/05/2015
-Tasks Done:
-
-Researched about how to install Java 3D on Centos Systems.
-
-Tasks Ahead:
-
-Document the process of installing Java 3D on Centos.
