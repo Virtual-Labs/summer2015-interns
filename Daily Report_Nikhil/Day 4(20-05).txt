@@ -1,4 +1,0 @@
-Day 4: 20/05/2015
-Tasks Done:
-
-Researched and tried to find a way to install java 3d api on ubuntu.
