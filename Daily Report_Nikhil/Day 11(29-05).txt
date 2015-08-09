@@ -1,8 +1,0 @@
-Day 11: 29/05/2015
-Tasks Done:
-
-Configuring the scripts to display the list of plugins required.
-
-Tasks Ahead:
-
-Write a shell script that downloads and installs the required softwares.
