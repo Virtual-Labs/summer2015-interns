@@ -1,6 +1,0 @@
-Day 20: 11/06/2015
-Tasks Done:
-Identified which device and OS the script is running on.
-
-Tasks Ahead:
-After identifying the device, download the appropriate packages.
