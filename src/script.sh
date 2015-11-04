@@ -185,4 +185,3 @@ export https_proxy="$proxy:$port"
 pwd > vers.txt
 read -r li < vers.txt
 rm $li/vers.txt
-#rm -R $line
