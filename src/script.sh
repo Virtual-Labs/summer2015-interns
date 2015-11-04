@@ -59,7 +59,7 @@ while [ $i -lt $lineno ]; do
 i=`expr $i + 1`
 head -$i basic.txt | tail -1 > vers.txt
 read -r line < vers.txt
-
+done
 #checking if another version of java is previously installed?
 java -version
 java_result=`echo $?`
