@@ -177,7 +177,7 @@ else
  fi
  echo "INSTALLED DEPENDENCIES"
 fi
-done
+
 #having old proxy
 export http_proxy="$proxy:$port"
 export https_proxy="$proxy:$port"
